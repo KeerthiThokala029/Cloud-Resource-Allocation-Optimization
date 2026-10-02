@@ -1,73 +1,63 @@
-# Welcome to your Lovable project
+# Cloud Resource Allocation Optimization
 
-## Project info
+A web-based cloud resource allocation and scheduling optimization system that compares a traditional Round-Robin scheduling approach with a Quantum-Inspired Evolutionary Algorithm (QIEA) using multiple performance metrics.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+The system provides an interactive workflow for uploading workload data, configuring simulation parameters, running scheduling simulations, comparing results, and analyzing the effect of VM processing power through MIPS sensitivity analysis.
 
-## How can I edit this code?
+> **Note:** QIEA in this project is implemented as a quantum-inspired classical simulation. It does not require quantum hardware.
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## Overview
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+Efficient cloud resource allocation is important for improving resource utilization, reducing execution time and energy consumption, and controlling infrastructure cost.
 
-Changes made via Lovable will be committed automatically to this repo.
+This project provides an interactive simulation environment for studying cloud resource allocation using:
 
-**Use your preferred IDE**
+- **Round-Robin scheduling** as the traditional baseline
+- **Quantum-Inspired Evolutionary Algorithm (QIEA)** for optimization
+- **Multi-objective fitness evaluation**
+- **Performance metric comparison**
+- **MIPS sensitivity analysis**
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+The application allows users to configure simulation parameters and observe how different scheduling strategies perform under the same workload.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
+## Problem Statement
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Traditional cloud scheduling approaches may not efficiently balance multiple objectives such as:
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+- Energy consumption
+- Execution time
+- Resource utilization
+- Scheduling efficiency
+- Estimated cost
 
-# Step 3: Install the necessary dependencies.
-npm i
+The goal of this project is to provide an optimization-oriented simulation environment that evaluates cloud resource allocation strategies across multiple performance dimensions.
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+---
 
-**Edit a file directly in GitHub**
+## Proposed Solution
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+The system follows an end-to-end workflow:
 
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+```text
+Workload Dataset
+       ↓
+Dataset Upload & Parsing
+       ↓
+Simulation Configuration
+       ↓
+Traditional Scheduling
+   (Round-Robin)
+       ↓
+QIEA Optimization
+       ↓
+Performance Evaluation
+       ↓
+Traditional vs QIEA Comparison
+       ↓
+MIPS Sensitivity Analysis
+       ↓
+Interactive Results Dashboard
