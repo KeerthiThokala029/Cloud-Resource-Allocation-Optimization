@@ -244,10 +244,69 @@ The application is implemented as a client-side web application. The scheduling 
 
 ## 🏗️ System Architecture
 
-The system follows an end-to-end workflow from workload input and preprocessing through scheduling, optimization, performance evaluation, MIPS analysis, and visualization.
+The system follows a complete end-to-end workflow from cloud workload input and dataset processing through simulation configuration, traditional scheduling, quantum-inspired optimization, fitness evaluation, performance analysis, MIPS sensitivity analysis, and results visualization.
 
 ![System Architecture](./docs/architecture/system-architecture.png)
 
+The major processing stages are:
+
+```text
+                    Cloud Workload Dataset
+                              │
+                              ▼
+                    Dataset Upload
+                              │
+                              ▼
+                    Data Parsing & Validation
+                              │
+                              ▼
+                    Simulation Configuration
+                              │
+               ┌──────────────┴──────────────┐
+               ▼                             ▼
+       Traditional Scheduler        Quantum-Inspired Optimizer
+          Round-Robin (RR)                    │
+               │                              ▼
+               │                    QIEA Evolution Process
+               │                              │
+               │                 ┌────────────┼────────────┐
+               │                 ▼            ▼            ▼
+               │            Selection    Crossover    Rotation
+               │                              │
+               │                              ▼
+               │                           Mutation
+               │                              │
+               └──────────────┬───────────────┘
+                              ▼
+                     Fitness Evaluation
+                              │
+                              ▼
+                    Performance Metrics
+                              │
+             ┌────────────────┼────────────────┐
+             ▼                ▼                ▼
+          Energy       Execution Time    Resource Utilization
+             │                │                │
+             └────────────────┼────────────────┘
+                              ▼
+                    Scheduling Efficiency
+                              │
+                              ▼
+                       Estimated Cost
+                              │
+                              ▼
+                    MIPS Sensitivity Analysis
+                              │
+               ┌──────────────┼──────────────┐
+               ▼              ▼              ▼
+            500 MIPS      1500 MIPS      2500 MIPS
+               │              │              │
+               └──────────────┼──────────────┘
+                              ▼
+                       Results Dashboard
+                              │
+                              ▼
+             Charts • Tables • Fitness History
 ### 🔎 Architecture Explanation
 
 - **Input Layer** – Provides the cloud workload dataset.
