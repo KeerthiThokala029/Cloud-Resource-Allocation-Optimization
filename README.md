@@ -1227,69 +1227,37 @@ Therefore, a result from one experiment should not be interpreted as a universal
 - The project does not claim universal superiority of one scheduling approach over another.
 
 ---
-
-## 👩‍💻 32. Disclaimer, Author, Connect & License
-
-### ⚠️ Disclaimer
+👩‍💻 32. Disclaimer, Author, Connect & License
+⚠️ Disclaimer
 
 This project is developed as an academic and research-oriented simulation of cloud resource allocation using a quantum-inspired evolutionary optimization approach.
 
-The QIEA implementation is **quantum-inspired classical computation** and does not require quantum hardware.
+The QIEA implementation is quantum-inspired classical computation and does not require quantum hardware.
 
 The performance results are simulation-based and may vary depending on the workload dataset and simulation configuration.
 
-The estimated cost is a **simulation metric** and does not represent actual billing from a specific cloud provider.
+The estimated cost is a simulation metric and does not represent actual billing from a specific cloud provider.
 
 This project is intended for educational, experimental, and research purposes.
 
----
+👩‍💻 Author
 
-### 👩‍💻 Author
+Keerthi Thokala
 
-**Keerthi Thokala**
+CSE (AI & ML) Student
 
-*CSE (AI & ML) Student*
+🔗 Connect
 
----
+GitHub:
+KeerthiThokala029
 
-### 🔗 Connect
+Project Repository:
+Quantum-Inspired Cloud Resource Allocation Optimization
 
-**GitHub:**  
-[KeerthiThokala029](https://github.com/KeerthiThokala029)
-
-**Project Repository:**  
-[Quantum-Inspired Cloud Resource Allocation Optimization](https://github.com/KeerthiThokala029/Quantum-Inspired-Cloud-Resource-Allocation-Optimization)
-
----
-
-### 📄 License
+📄 License
 
 This project is intended for academic and educational purposes.
 
 You may use the source code for learning, experimentation, and research with appropriate attribution.
 
 A formal open-source license can be added to the repository in the future if the project is released under a specific license such as MIT.
-
----
-
-### 📄 License
-
-
-```
-
-
-A formal open-source license can be added to the repository in the future if the project is released under a specific license such as MIT.
-
----
-
-# ⭐ Project Summary
-
-**Quantum-Inspired Cloud Resource Allocation Optimization** demonstrates how a classical Quantum-Inspired Evolutionary Algorithm can be applied to cloud task scheduling and compared with a traditional Round-Robin approach.
-
-The project combines:
-
-> **☁️ Cloud Computing + 📊 Resource Allocation + 🧬 Evolutionary Optimization + ⚛️ Quantum-Inspired Computing + 📈 Data Visualization**
-
-to provide an interactive platform for experimenting with intelligent cloud scheduling strategies.
-
-```
