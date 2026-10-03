@@ -1242,16 +1242,20 @@ The estimated cost is a **simulation metric** and does not represent actual bill
 This project is intended for educational, experimental, and research purposes.
 
 ## 👩‍💻 Author and Connect
+### 🔗 Connect
 
-**Keerthi Thokala**
-
-GitHub:
+**GitHub:**
 
 https://github.com/KeerthiThokala029
 
-Project Repository:
+**Project Repository:**
 
 https://github.com/KeerthiThokala029/Quantum-Inspired-Cloud-Resource-Allocation-Optimization
+
+**⚛️ Quantum-Inspired Cloud Resource Allocation Optimization**  
+Cloud Workload Analysis • Scheduling • Optimization • Visualization
+
+               Built by Keerthi Thokala
 
 📄 License
 
