@@ -839,31 +839,57 @@ Therefore, individual experimental results should be interpreted within their co
 
 ---
 
-# 🖼️ 23. Application Screenshots
+## 📸 23. Application Screenshots
 
-The repository can contain screenshots demonstrating the major stages of the application.
+The following screenshots demonstrate the major stages and analysis views of the application.
 
 ### 🏠 Home Page
 
 Shows the project introduction and navigation.
 
+![Home Page](./docs/screenshots/home%20page.png)
+
 ### 📂 Upload Page
 
 Shows workload upload and validation.
+
+![Upload Page](./docs/screenshots/upload-page.png)
 
 ### ⚙️ Configuration Page
 
 Shows simulation parameter configuration.
 
+![Configuration Page](./docs/screenshots/configuration-page.png)
+
 ### 🧪 Simulation Page
 
 Shows the scheduling simulation workflow.
 
-### 📊 Results Page
+![Simulation Page](./docs/screenshots/simulation-page.png)
 
-Shows metric comparisons, fitness visualization, and MIPS sensitivity analysis.
+### 📊 Simulation Results
 
-> Store screenshots in the repository and reference them using their actual file paths when available.
+Shows the overall simulation output and comparison between traditional scheduling and QIEA.
+
+![Simulation Results](./docs/screenshots/simulation-results.png)
+
+### 📈 Performance Comparison
+
+Shows the comparison of key performance metrics between the traditional scheduler and QIEA.
+
+![Performance Comparison](./docs/screenshots/performance-comparison.png)
+
+### ⚡ VM Processing Power Analysis
+
+Shows the effect of different VM processing power levels (MIPS) on scheduling performance.
+
+![VM Processing Power Analysis](./docs/screenshots/vm-processing-power-analysis.png)
+
+### 📋 Detailed Comparison
+
+Shows the detailed metric-by-metric comparison of the scheduling approaches.
+
+![Detailed Comparison](./docs/screenshots/detailed-comparison.png)
 
 ---
 
