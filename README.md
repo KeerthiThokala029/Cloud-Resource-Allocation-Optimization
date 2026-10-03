@@ -12,39 +12,39 @@ The application provides an interactive workflow for uploading workload data, co
 
 ## 📑 Table of Contents
 
- [Overview](#-1-overview)
- [Problem Statement](#-2-problem-statement)
- [Motivation](#-3-motivation)
- [Objectives](#-4-objectives)
- [Core Features](#-5-core-features)
- [Technology Stack](#-6-technology-stack)
- [System Architecture](#-7-system-architecture)
- [Architecture Explanation](#-8-architecture-explanation)
- [Dataset](#-9-dataset)
- [Dataset Schema](#-10-dataset-schema)
- [Data Processing](#-11-data-processing)
- [Simulation and Optimization Logic](#-12-simulation-and-optimization-logic)
- [Traditional Scheduling](#-13-traditional-scheduling)
- [Quantum-Inspired Evolutionary Algorithm](#-14-quantum-inspired-evolutionary-algorithm)
- [Scheduling Factors](#-15-scheduling-factors)
- [Optimization Objectives](#-16-optimization-objectives)
- [Performance Metrics](#-17-performance-metrics)
- [Reproducible Benchmarking](#-18-reproducible-benchmarking)
- [MIPS Sensitivity Analysis](#-19-mips-sensitivity-analysis)
- [System Workflow](#-20-system-workflow)
- [Application Modules](#-21-application-modules)
- [Results and Visualization](#-22-results-and-visualization)
- [Application Screenshots](#-23-application-screenshots)
- [Project Structure](#-24-project-structure)
- [Getting Started](#-25-getting-started)
- [Prerequisites & Installation](#-26-prerequisites--installation)
- [Running, Building & Previewing](#-27-running-building--previewing)
- [Testing & Linting](#-28-testing--linting)
- [How the Application Works](#-29-how-the-application-works)
- [Key Capabilities & Project Goals](#-30-key-capabilities--project-goals)
- [Future Enhancements, Technical Notes & Limitations](#-31-future-enhancements-technical-notes--limitations)
- [Disclaimer, Author, Connect & License](#-32-disclaimer-author-connect--license)
-
+- [Overview](#overview)
+- [Problem Statement](#problem-statement)
+- [Motivation](#motivation)
+- [Objectives](#objectives)
+- [Core Features](#core-features)
+- [Technology Stack](#technology-stack)
+- [System Architecture](#system-architecture)
+- [Architecture Explanation](#architecture-explanation)
+- [Dataset](#dataset)
+- [Dataset Schema](#dataset-schema)
+- [Data Processing](#data-processing)
+- [Simulation and Optimization Logic](#simulation-and-optimization-logic)
+- [Traditional Scheduling](#traditional-scheduling)
+- [Quantum-Inspired Evolutionary Algorithm](#quantum-inspired-evolutionary-algorithm)
+- [Scheduling Factors](#scheduling-factors)
+- [Optimization Objectives](#optimization-objectives)
+- [Performance Metrics](#performance-metrics)
+- [Reproducible Benchmarking](#reproducible-benchmarking)
+- [MIPS Sensitivity Analysis](#mips-sensitivity-analysis)
+- [System Workflow](#system-workflow)
+- [Application Modules](#application-modules)
+- [Results and Visualization](#results-and-visualization)
+- [Application Screenshots](#application-screenshots)
+- [Project Structure](#project-structure)
+- [Getting Started](#getting-started)
+- [Prerequisites & Installation](#prerequisites--installation)
+- [Running, Building & Previewing](#running-building--previewing)
+- [Testing & Linting](#testing--linting)
+- [How the Application Works](#how-the-application-works)
+- [Key Capabilities & Project Goals](#key-capabilities--project-goals)
+- [Future Enhancements, Technical Notes & Limitations](#future-enhancements-technical-notes--limitations)
+- [Disclaimer, Author, Connect & License](#disclaimer-author-connect--license)
+  
 ---
 
 # 🚀 Overview
@@ -1252,12 +1252,12 @@ https://github.com/KeerthiThokala029
 
 https://github.com/KeerthiThokala029/Quantum-Inspired-Cloud-Resource-Allocation-Optimization
 
-**⚛️ Quantum-Inspired Cloud Resource Allocation Optimization**  
+**⚛️ Quantum Cloud Optimizer**  
 Cloud Workload Analysis • Scheduling • Optimization • Visualization
 
-                  **Built by Keerthi Thokala**
+Built by **Keerthi Thokala**
 
-📄 License
+### 📄 License
 
 This project is intended for academic and educational purposes.
 
