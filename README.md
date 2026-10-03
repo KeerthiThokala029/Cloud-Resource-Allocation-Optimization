@@ -1227,32 +1227,31 @@ Therefore, a result from one experiment should not be interpreted as a universal
 - The project does not claim universal superiority of one scheduling approach over another.
 
 ---
-👩‍💻 Disclaimer, Author, Connect & License
-⚠️ Disclaimer
+ ## Disclaimer, Author, Connect & License
+
+### ⚠️ Disclaimer
 
 This project is developed as an academic and research-oriented simulation of cloud resource allocation using a quantum-inspired evolutionary optimization approach.
 
-The QIEA implementation is quantum-inspired classical computation and does not require quantum hardware.
+The QIEA implementation is **quantum-inspired classical computation** and does not require quantum hardware.
 
 The performance results are simulation-based and may vary depending on the workload dataset and simulation configuration.
 
-The estimated cost is a simulation metric and does not represent actual billing from a specific cloud provider.
+The estimated cost is a **simulation metric** and does not represent actual billing from a specific cloud provider.
 
 This project is intended for educational, experimental, and research purposes.
 
-👩‍💻 Author
+## 👩‍💻 Author and Connect
 
-Keerthi Thokala
-
-CSE (AI & ML) Student
-
-🔗 Connect
+**Keerthi Thokala**
 
 GitHub:
-KeerthiThokala029
+
+https://github.com/KeerthiThokala029
 
 Project Repository:
-Quantum-Inspired Cloud Resource Allocation Optimization
+
+https://github.com/KeerthiThokala029/Quantum-Inspired-Cloud-Resource-Allocation-Optimization
 
 📄 License
 
