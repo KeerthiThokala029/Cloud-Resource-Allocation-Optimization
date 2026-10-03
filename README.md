@@ -17,8 +17,8 @@ The system provides an interactive workflow for uploading workload data, configu
 - [Motivation](#-motivation)
 - [Objectives](#-objectives)
 - [Core Features](#-core-features)
-- [Technology Stack](#️-technology-stack)
-- [System Architecture](#️-system-architecture)
+- [Technology Stack](#-technology-stack)
+- [System Architecture](#-system-architecture)
 - [Architecture Explanation](#-architecture-explanation)
 - [Dataset](#-dataset)
 - [Dataset Schema](#-dataset-schema)
@@ -29,7 +29,6 @@ The system provides an interactive workflow for uploading workload data, configu
 - [Scheduling Factors](#-scheduling-factors)
 - [Optimization Objectives](#-optimization-objectives)
 - [Performance Metrics](#-performance-metrics)
-- [Reproducible Benchmarking](#-reproducible-benchmarking)
 - [MIPS Sensitivity Analysis](#-mips-sensitivity-analysis)
 - [System Workflow](#-system-workflow)
 - [Application Modules](#-application-modules)
@@ -117,7 +116,7 @@ A scheduling solution may need to balance:
 - Scheduling efficiency
 - Estimated cost
 
-Traditional scheduling methods can distribute tasks in a simple and predictable manner, while optimization-based methods can explore a larger set of possible task-to-VM assignments.
+Traditional scheduling methods can distribute tasks efficiently in a simple manner, but optimization-based methods can explore a larger set of possible task-to-VM assignments.
 
 This project explores a **Quantum-Inspired Evolutionary Algorithm (QIEA)** as an optimization-oriented approach to cloud scheduling.
 
@@ -144,6 +143,8 @@ The major objectives of the project are:
 ---
 
 ## ✨ Core Features
+
+The application provides an optimization-focused cloud scheduling dashboard with the following capabilities.
 
 ### 📂 Dataset Processing
 
@@ -225,7 +226,7 @@ The results interface provides:
 
 ## 🛠️ Technology Stack
 
-| Category | Technology |
+| **Category** | **Technology** |
 |---|---|
 | Frontend | React |
 | Programming Language | TypeScript |
@@ -244,135 +245,215 @@ The application is implemented as a client-side web application. The scheduling 
 
 ## 🏗️ System Architecture
 
-The system follows a complete end-to-end workflow from cloud workload input and dataset processing through simulation configuration, traditional scheduling, quantum-inspired optimization, fitness evaluation, performance analysis, MIPS sensitivity analysis, and results visualization.
-
-![System Architecture](./docs/architecture/system-architecture.png)
-
-The major processing stages are:
+The system follows an end-to-end workflow from workload input and preprocessing through scheduling, optimization, performance evaluation, MIPS analysis, and visualization.
 
 ```text
-                    Cloud Workload Dataset
+                    ☁️ CLOUD WORKLOAD DATASET
                               │
                               ▼
-                    Dataset Upload
+                    📂 DATASET UPLOAD
                               │
                               ▼
-                    Data Parsing & Validation
+                    🔍 PARSING & VALIDATION
                               │
                               ▼
-                    Simulation Configuration
-                              │
-               ┌──────────────┴──────────────┐
-               ▼                             ▼
-       Traditional Scheduler        Quantum-Inspired Optimizer
-          Round-Robin (RR)                    │
-               │                              ▼
-               │                    QIEA Evolution Process
-               │                              │
-               │                 ┌────────────┼────────────┐
-               │                 ▼            ▼            ▼
-               │            Selection    Crossover    Rotation
-               │                              │
-               │                              ▼
-               │                           Mutation
-               │                              │
-               └──────────────┬───────────────┘
-                              ▼
-                     Fitness Evaluation
+                    ⚙️ SIMULATION CONFIGURATION
                               │
                               ▼
-                    Performance Metrics
-                              │
-             ┌────────────────┼────────────────┐
-             ▼                ▼                ▼
-          Energy       Execution Time    Resource Utilization
-             │                │                │
-             └────────────────┼────────────────┘
+                 ┌────────────┴────────────┐
+                 │                         │
+                 ▼                         ▼
+        🔄 ROUND-ROBIN              ⚛️ QIEA OPTIMIZATION
+          SCHEDULING                       │
+                 │                         │
+                 │                ┌────────┴────────┐
+                 │                │                 │
+                 │                ▼                 ▼
+                 │          Fitness Evaluation   Evolution
+                 │                │                 │
+                 │                └────────┬────────┘
+                 │                         │
+                 └────────────┬────────────┘
                               ▼
-                    Scheduling Efficiency
-                              │
-                              ▼
-                       Estimated Cost
-                              │
-                              ▼
-                    MIPS Sensitivity Analysis
-                              │
-               ┌──────────────┼──────────────┐
-               ▼              ▼              ▼
-            500 MIPS      1500 MIPS      2500 MIPS
-               │              │              │
-               └──────────────┼──────────────┘
-                              ▼
-                       Results Dashboard
+                    📊 PERFORMANCE METRICS
                               │
                               ▼
-             Charts • Tables • Fitness History
-### 🔎 Architecture Explanation
+                    📈 RESULT COMPARISON
+                              │
+                              ▼
+                    🔬 MIPS SENSITIVITY
+                              │
+                              ▼
+                    📊 RESULTS DASHBOARD
 
-- **Input Layer** – Provides the cloud workload dataset.
-- **Dataset Upload** – Allows users to upload workload data through the application.
-- **Parsing & Validation** – Detects the dataset structure and validates the uploaded workload data.
-- **Configuration Layer** – Defines VM count, MIPS, mutation rate, crossover probability, rotation angle, and energy model.
-- **Scheduling Layer** – Executes the traditional Round-Robin scheduling baseline.
-- **Optimization Layer** – Executes the Quantum-Inspired Evolutionary Algorithm.
-- **Fitness Evaluation** – Evaluates candidate solutions using multiple scheduling objectives.
-- **Evolution Layer** – Applies selection, crossover, rotation, mutation, and best-solution tracking.
-- **Performance Layer** – Calculates energy, execution time, resource utilization, scheduling efficiency, and estimated cost.
-- **Sensitivity Analysis** – Evaluates the effect of different VM processing capacities.
-- **Visualization Layer** – Displays comparisons, fitness history, sensitivity-analysis charts, and final results.
+
+## 🔎 Architecture Explanation
+
+The system is organized into a sequence of modules that transform the uploaded cloud workload into optimized scheduling results.
+
+### 1. ☁️ Workload Input
+
+The process begins with a cloud workload dataset containing task-related information required for the scheduling simulation.
+
+### 2. 📂 Dataset Upload
+
+Users upload the workload dataset through the application. The uploaded file becomes the input for the scheduling and optimization process.
+
+### 3. 🔍 Parsing and Validation
+
+The application reads the uploaded dataset, identifies its structure, validates the available records, and converts the workload into an internal format that can be processed by the simulator.
+
+### 4. ⚙️ Simulation Configuration
+
+Users configure the simulation parameters, including:
+
+- Number of VMs
+- VM processing capacity (MIPS)
+- Population size
+- Number of generations
+- Mutation rate
+- Crossover probability
+- Rotation angle
+- Energy model
+- Random seed
+
+The available energy models are **Linear, Square, and Cubic**.
+
+### 5. 🔄 Traditional Scheduling
+
+The system first generates a baseline scheduling solution using the **Round-Robin scheduling algorithm**.
+
+This provides a reference solution for evaluating the optimized scheduling approach.
+
+### 6. ⚛️ Quantum-Inspired Optimization
+
+The **Quantum-Inspired Evolutionary Algorithm (QIEA)** generates and improves candidate task-to-VM assignments.
+
+The optimization process uses:
+
+- Population initialization
+- Fitness evaluation
+- Selection
+- Crossover
+- Quantum-inspired rotation
+- Mutation
+- Best-solution tracking
+
+### 7. 🎯 Fitness Evaluation
+
+Each candidate scheduling solution is evaluated using a weighted multi-objective fitness function.
+
+| Objective | Weight |
+|---|---:|
+| Energy | 30% |
+| Execution Time | 30% |
+| Resource Utilization | 15% |
+| Scheduling Efficiency | 15% |
+| Estimated Cost | 10% |
+
+This allows the optimizer to consider multiple aspects of cloud resource allocation simultaneously.
+
+### 8. 📊 Performance Evaluation
+
+The generated scheduling solutions are evaluated using:
+
+- Energy consumption
+- Execution time
+- Resource utilization
+- Scheduling efficiency
+- Estimated cost
+
+The results of Round-Robin and QIEA are presented for comparison.
+
+### 9. 📈 MIPS Sensitivity Analysis
+
+The system evaluates different VM processing capacities to study how changes in MIPS affect scheduling performance.
+
+The analysis uses:
+
+- 500 MIPS
+- 1000 MIPS
+- 1500 MIPS
+- 2000 MIPS
+- 2500 MIPS
+
+For each configuration, the system compares the Traditional Round-Robin and QIEA approaches across the supported performance metrics.
+
+### 10. 📊 Results Visualization
+
+The final results are presented through interactive charts, tables, metric cards, and fitness-history visualizations.
+
+The Results page provides a consolidated view of the scheduling comparison and MIPS sensitivity analysis.
+
+> **Architecture Note:** QIEA is implemented as a classical software simulation inspired by quantum computing concepts. The project does not require physical quantum hardware.
 
 ---
 
 ## 📚 Dataset
 
-The application accepts structured workload data containing information required to model cloud tasks.
+The application uses cloud workload data as the input for its resource allocation simulation.
 
-The uploaded dataset is parsed by the application and converted into an internal task representation before scheduling simulation.
+The dataset represents a collection of computational tasks that can be assigned to available virtual machines.
 
-The system is designed to work with workload datasets that contain:
+The application processes the uploaded workload and converts it into an internal representation before applying the scheduling algorithms.
+
+The workload information is used by both **Round-Robin** and **QIEA** so that the two approaches can be evaluated under the same simulation configuration.
+
+The system can process workload files containing task-related information such as:
 
 - Task identifiers
-- Task/workload size information
+- Workload or task length
 - Processing requirements
-- Additional scheduling-related attributes when available
+- Other dataset-specific attributes
 
-The exact fields depend on the uploaded workload dataset.
+The exact columns depend on the workload dataset supplied to the application.
 
 ---
 
 ## 🧾 Dataset Schema
 
-The application does not depend on one fixed external dataset schema.
+The application is not restricted to a single fixed external dataset schema.
 
-During upload, the dataset parser identifies the available structure and converts valid records into the internal workload representation required by the simulator.
+During the upload process, the dataset is parsed and the available workload information is converted into the internal representation required by the simulation engine.
 
-A typical workload record can conceptually contain:
+A typical workload dataset can conceptually contain:
 
 | Field | Description |
 |---|---|
-| Task ID | Unique identifier for a task |
-| Workload / Length | Computational workload associated with the task |
-| Additional Attributes | Dataset-specific scheduling information |
+| Task ID | Identifier used to distinguish individual tasks |
+| Workload / Length | Represents the computational workload of a task |
+| Processing Information | Information required for scheduling or execution-time calculation |
+| Additional Attributes | Dataset-specific information that may be available |
 
-> The exact column names and available attributes depend on the dataset supplied by the user.
+> **Note:** The exact field names depend on the workload dataset used for the simulation.
 
 ---
 
 ## 🔄 Data Processing
 
-The dataset processing pipeline consists of the following stages:
+The workload processing pipeline converts the uploaded dataset into simulation-ready task data.
 
-```text
-Dataset Upload
-      ↓
-File Parsing
-      ↓
-Delimiter / Structure Detection
-      ↓
-Header Validation
-      ↓
-Data Validation
-      ↓
-Task Representation
-      ↓
-Simulation Input
+The main stages are:
+
+**1. Dataset Upload**  
+The user provides the workload file through the Upload module.
+
+**2. File Parsing**  
+The application reads the uploaded file and identifies its available structure.
+
+**3. Structure Detection**  
+The parser identifies headers and determines the delimiter used by the dataset.
+
+**4. Data Validation**  
+The application checks whether the uploaded data contains valid workload records required for simulation.
+
+**5. Task Conversion**  
+Valid records are converted into the internal task representation used by the scheduling engine.
+
+**6. Simulation Input**  
+The processed workload is passed to the simulation engine.
+
+**7. Scheduling and Optimization**  
+The same workload is evaluated using Round-Robin and QIEA scheduling.
+
+This process ensures that both scheduling approaches operate on the same workload input, allowing their simulated performance to be compared consistently.
