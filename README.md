@@ -12,42 +12,42 @@ The application provides an interactive workflow for uploading workload data, co
 
 ## 📑 Table of Contents
 
-1. [Overview](#-1-overview)
-2. [Problem Statement](#-2-problem-statement)
-3. [Motivation](#-3-motivation)
-4. [Objectives](#-4-objectives)
-5. [Core Features](#-5-core-features)
-6. [Technology Stack](#-6-technology-stack)
-7. [System Architecture](#-7-system-architecture)
-8. [Architecture Explanation](#-8-architecture-explanation)
-9. [Dataset](#-9-dataset)
-10. [Dataset Schema](#-10-dataset-schema)
-11. [Data Processing](#-11-data-processing)
-12. [Simulation and Optimization Logic](#-12-simulation-and-optimization-logic)
-13. [Traditional Scheduling](#-13-traditional-scheduling)
-14. [Quantum-Inspired Evolutionary Algorithm](#-14-quantum-inspired-evolutionary-algorithm)
-15. [Scheduling Factors](#-15-scheduling-factors)
-16. [Optimization Objectives](#-16-optimization-objectives)
-17. [Performance Metrics](#-17-performance-metrics)
-18. [Reproducible Benchmarking](#-18-reproducible-benchmarking)
-19. [MIPS Sensitivity Analysis](#-19-mips-sensitivity-analysis)
-20. [System Workflow](#-20-system-workflow)
-21. [Application Modules](#-21-application-modules)
-22. [Results and Visualization](#-22-results-and-visualization)
-23. [Application Screenshots](#-23-application-screenshots)
-24. [Project Structure](#-24-project-structure)
-25. [Getting Started](#-25-getting-started)
-26. [Prerequisites & Installation](#-26-prerequisites--installation)
-27. [Running, Building & Previewing](#-27-running-building--previewing)
-28. [Testing & Linting](#-28-testing--linting)
-29. [How the Application Works](#-29-how-the-application-works)
-30. [Key Capabilities & Project Goals](#-30-key-capabilities--project-goals)
-31. [Future Enhancements, Technical Notes & Limitations](#-31-future-enhancements-technical-notes--limitations)
-32. [Disclaimer, Author, Connect & License](#-32-disclaimer-author-connect--license)
+ [Overview](#-1-overview)
+ [Problem Statement](#-2-problem-statement)
+ [Motivation](#-3-motivation)
+ [Objectives](#-4-objectives)
+ [Core Features](#-5-core-features)
+ [Technology Stack](#-6-technology-stack)
+ [System Architecture](#-7-system-architecture)
+ [Architecture Explanation](#-8-architecture-explanation)
+ [Dataset](#-9-dataset)
+ [Dataset Schema](#-10-dataset-schema)
+ [Data Processing](#-11-data-processing)
+ [Simulation and Optimization Logic](#-12-simulation-and-optimization-logic)
+ [Traditional Scheduling](#-13-traditional-scheduling)
+ [Quantum-Inspired Evolutionary Algorithm](#-14-quantum-inspired-evolutionary-algorithm)
+ [Scheduling Factors](#-15-scheduling-factors)
+ [Optimization Objectives](#-16-optimization-objectives)
+ [Performance Metrics](#-17-performance-metrics)
+ [Reproducible Benchmarking](#-18-reproducible-benchmarking)
+ [MIPS Sensitivity Analysis](#-19-mips-sensitivity-analysis)
+ [System Workflow](#-20-system-workflow)
+ [Application Modules](#-21-application-modules)
+ [Results and Visualization](#-22-results-and-visualization)
+ [Application Screenshots](#-23-application-screenshots)
+ [Project Structure](#-24-project-structure)
+ [Getting Started](#-25-getting-started)
+ [Prerequisites & Installation](#-26-prerequisites--installation)
+ [Running, Building & Previewing](#-27-running-building--previewing)
+ [Testing & Linting](#-28-testing--linting)
+ [How the Application Works](#-29-how-the-application-works)
+ [Key Capabilities & Project Goals](#-30-key-capabilities--project-goals)
+ [Future Enhancements, Technical Notes & Limitations](#-31-future-enhancements-technical-notes--limitations)
+ [Disclaimer, Author, Connect & License](#-32-disclaimer-author-connect--license)
 
 ---
 
-# 🚀 1. Overview
+# 🚀 Overview
 
 **Quantum-Inspired Cloud Resource Allocation Optimization** is an interactive web application developed to study intelligent cloud task scheduling and resource allocation.
 
@@ -72,7 +72,7 @@ The project is designed primarily for **academic experimentation, simulation, vi
 
 ---
 
-# 🎯 2. Problem Statement
+# 🎯 Problem Statement
 
 Cloud computing environments must efficiently distribute computational tasks across available virtual machines.
 
@@ -92,7 +92,7 @@ The system provides a common platform for comparing the baseline and optimizatio
 
 ---
 
-# 💡 3. Motivation
+# 💡 Motivation
 
 Cloud resource scheduling is an important problem because the same workload can produce different performance results depending on how tasks are assigned to virtual machines.
 
@@ -106,7 +106,7 @@ The interactive dashboard makes it possible to experiment with different VM conf
 
 ---
 
-# 🎯 4. Objectives
+# 🎯 Objectives
 
 The major objectives of the project are:
 
@@ -124,7 +124,7 @@ The major objectives of the project are:
 
 ---
 
-# ✨ 5. Core Features
+# ✨ Core Features
 
 ## 📂 Workload Upload
 
@@ -179,7 +179,7 @@ The application evaluates VM processing capacity at:
 
 ---
 
-# 🛠️ 6. Technology Stack
+# 🛠️  Technology Stack
 
 | Technology | Purpose |
 |---|---|
@@ -195,7 +195,7 @@ The application evaluates VM processing capacity at:
 
 ---
 
-# 🏗️ 7. System Architecture
+# 🏗️  System Architecture
 
 The application follows a modular simulation architecture.
 
@@ -261,7 +261,7 @@ The application follows a modular simulation architecture.
 
 ---
 
-# 🔎 8. Architecture Explanation
+# 🔎  Architecture Explanation
 
 The application follows a modular simulation architecture where workload input, configuration, scheduling, optimization, evaluation, and visualization are handled as separate stages.
 
@@ -375,7 +375,7 @@ The final results are presented through charts, tables, metric cards, fitness-hi
 
 ---
 
-# 📁 9. Dataset
+# 📁 Dataset
 
 The project uses structured workload data as input to the scheduling simulation.
 
@@ -389,7 +389,7 @@ This makes it possible to experiment with different workload configurations with
 
 ---
 
-# 🧾 10. Dataset Schema
+# 🧾 Dataset Schema
 
 The workload parser converts uploaded data into the internal representation required by the simulation engine.
 
@@ -411,7 +411,7 @@ The parser performs format detection and validation before the workload is passe
 
 ---
 
-# 🔄 11. Data Processing
+# 🔄 Data Processing
 
 The workload processing pipeline is:
 
@@ -443,7 +443,7 @@ Pass to Scheduling Engine
 
 ---
 
-# 🧬 12. Simulation and Optimization Logic
+# 🧬 Simulation and Optimization Logic
 
 The simulation follows a common workflow for both scheduling approaches.
 
@@ -479,7 +479,7 @@ The same workload and relevant VM configuration are used when comparing the sche
 
 ---
 
-# 🔁 13. Traditional Scheduling
+# 🔁 Traditional Scheduling
 
 The traditional scheduling approach used in this project is **Round-Robin**.
 
@@ -510,7 +510,7 @@ Round-Robin does not perform evolutionary search over possible task allocations.
 
 ---
 
-# ⚛️ 14. Quantum-Inspired Evolutionary Algorithm
+# ⚛️ Quantum-Inspired Evolutionary Algorithm
 
 The project implements a **Quantum-Inspired Evolutionary Algorithm (QIEA)** using classical computation.
 
@@ -553,7 +553,7 @@ Therefore, this project should be described as a **quantum-inspired classical op
 
 ---
 
-# ⚙️ 15. Scheduling Factors
+# ⚙️ Scheduling Factors
 
 The scheduling and optimization behavior can be controlled using several parameters.
 
@@ -579,7 +579,7 @@ SIMULATION_SEED = 42
 
 ---
 
-# 🎯 16. Optimization Objectives
+# 🎯 Optimization Objectives
 
 The QIEA fitness function combines multiple performance objectives.
 
@@ -596,7 +596,7 @@ The weighted objective allows the optimization process to consider multiple sche
 
 ---
 
-# 📊 17. Performance Metrics
+# 📊 Performance Metrics
 
 The system evaluates scheduling performance using five primary metrics.
 
@@ -630,7 +630,7 @@ Represents a simulated cost associated with the scheduling configuration and wor
 
 ---
 
-# 🔬 18. Reproducible Benchmarking
+# 🔬 Reproducible Benchmarking
 
 The simulation uses a fixed random seed:
 
@@ -651,7 +651,7 @@ The goal is to make repeated experiments easier to compare under controlled cond
 
 ---
 
-# 📈 19. MIPS Sensitivity Analysis
+# 📈 MIPS Sensitivity Analysis
 
 **MIPS** stands for **Million Instructions Per Second** and represents the processing capacity assigned to a virtual machine.
 
@@ -690,7 +690,7 @@ The analysis re-runs the simulation while changing the MIPS parameter and keepin
 
 ---
 
-# 🔄 20. System Workflow
+# 🔄 System Workflow
 
 The complete user workflow is:
 
@@ -739,7 +739,7 @@ Round-Robin          QIEA
 
 ---
 
-# 🖥️ 21. Application Modules
+# 🖥️ Application Modules
 
 ## 🏠 Home Page
 
@@ -785,7 +785,7 @@ Displays:
 
 ---
 
-# 📊 22. Results and Visualization
+# 📊 Results and Visualization
 
 The Results Dashboard provides multiple visualization components.
 
@@ -839,7 +839,7 @@ Therefore, individual experimental results should be interpreted within their co
 
 ---
 
-## 📸 23. Application Screenshots
+## 📸 Application Screenshots
 
 The following screenshots demonstrate the major stages and analysis views of the application.
 
@@ -893,7 +893,7 @@ Shows the detailed metric-by-metric comparison of the scheduling approaches.
 
 ---
 
-# 📁 24. Project Structure
+# 📁 Project Structure
 
 The main project structure is organized as follow:
 
@@ -949,7 +949,7 @@ quantum-cloud-optimizer/
 ```
 ---
 
-# 🚀 25. Getting Started
+# 🚀 Getting Started
 
 ## Clone the Repository
 
@@ -979,7 +979,7 @@ The terminal will display the local development URL.
 
 ---
 
-# 📦 26. Prerequisites & Installation
+# 📦 Prerequisites & Installation
 
 ## Prerequisites
 
@@ -1031,7 +1031,7 @@ npm install
 
 ---
 
-# ▶️ 27. Running, Building & Previewing
+# ▶️ Running, Building & Previewing
 
 ## Development Server
 
@@ -1059,7 +1059,7 @@ This allows the production build to be previewed locally.
 
 ---
 
-# 🧪 28. Testing & Linting
+# 🧪 Testing & Linting
 
 The project can be checked using the development scripts configured in `package.json`.
 
@@ -1083,7 +1083,7 @@ npm run lint
 
 ---
 
-# 🔍 29. How the Application Works
+# 🔍 How the Application Works
 
 The application follows a complete scheduling experiment workflow.
 
@@ -1139,7 +1139,7 @@ The Results page presents:
 
 ---
 
-# 🌟 30. Key Capabilities & Project Goals
+# 🌟 Key Capabilities & Project Goals
 
 ## Key Capabilities
 
@@ -1163,7 +1163,7 @@ The project also demonstrates how evolutionary optimization concepts can be appl
 
 ---
 
-# 🔮 31. Future Enhancements, Technical Notes & Limitations
+# 🔮Future Enhancements, Technical Notes & Limitations
 
 ## Future Enhancements
 
@@ -1227,7 +1227,7 @@ Therefore, a result from one experiment should not be interpreted as a universal
 - The project does not claim universal superiority of one scheduling approach over another.
 
 ---
-👩‍💻 32. Disclaimer, Author, Connect & License
+👩‍💻 Disclaimer, Author, Connect & License
 ⚠️ Disclaimer
 
 This project is developed as an academic and research-oriented simulation of cloud resource allocation using a quantum-inspired evolutionary optimization approach.
