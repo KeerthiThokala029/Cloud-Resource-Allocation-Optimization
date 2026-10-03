@@ -1255,7 +1255,7 @@ https://github.com/KeerthiThokala029/Quantum-Inspired-Cloud-Resource-Allocation-
 **⚛️ Quantum Cloud Optimizer**  
 Cloud Workload Analysis • Scheduling • Optimization • Visualization
 
-               Built by **Keerthi Thokala**
+Built by **Keerthi Thokala**
 
 ### 📄 License
 
