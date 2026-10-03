@@ -895,7 +895,7 @@ Shows the detailed metric-by-metric comparison of the scheduling approaches.
 
 # 📁 24. Project Structure
 
-The main project structure is organized as follows:
+The main project structure is organized as follow:
 
 ```text
 quantum-cloud-optimizer/
@@ -906,6 +906,16 @@ quantum-cloud-optimizer/
 │
 ├── public/
 │
+├── screenshots/
+│   ├── home page.png
+│   ├── upload-page.png
+│   ├── configuration-page.png
+│   ├── simulation-page.png
+│   ├── simulation-results.png
+│   ├── performance-comparison.png
+│   ├── vm-processing-power-analysis.png
+│   └── detailed-comparison.png
+│
 ├── src/
 │   ├── components/
 │   │
@@ -913,7 +923,8 @@ quantum-cloud-optimizer/
 │   │
 │   ├── lib/
 │   │   ├── simulation.ts
-│   │   └── fileParser.ts
+│   │   ├── fileParser.ts
+│   │   └── utils.ts
 │   │
 │   ├── pages/
 │   │   ├── Home.tsx
@@ -935,8 +946,7 @@ quantum-cloud-optimizer/
 └── README.md
 ```
 
-> Supporting folders may contain additional components and configuration files as the project evolves.
-
+```
 ---
 
 # 🚀 25. Getting Started
@@ -1218,44 +1228,48 @@ Therefore, a result from one experiment should not be interpreted as a universal
 
 ---
 
-# 📌 32. Disclaimer, Author, Connect & License
+```markdown
+## 👩‍💻 32. Disclaimer, Author, Connect & License
 
-## ⚠️ Disclaimer
+### ⚠️ Disclaimer
 
-This project is developed for **academic, educational, experimentation, and demonstration purposes**.
+This project is developed as an academic and research-oriented simulation of cloud resource allocation using a quantum-inspired evolutionary optimization approach.
 
-The scheduling results represent simulated outcomes and should not be interpreted as guaranteed performance improvements in production cloud environments.
+The QIEA implementation is **quantum-inspired classical computation** and does not require quantum hardware.
 
----
+The performance results are simulation-based and may vary depending on the workload dataset and simulation configuration.
 
-## 👩‍💻 Author
+The estimated cost is a **simulation metric** and does not represent actual billing from a specific cloud provider.
 
-### **Keerthi Thokala**
-
-**CSE (AI & ML) Student**
-
-### Areas of Interest
-
-- Artificial Intelligence
-- Machine Learning
-- Cloud Computing
-- Optimization
-- Quantum-Inspired Computing
-- Intelligent Resource Management
+This project is intended for educational, experimental, and research purposes.
 
 ---
 
-## 🔗 Connect
+### 👩‍💻 Author
 
-### GitHub Repository
+**Keerthi Thokala**
 
-[Cloud-Resource-Allocation-Optimization](https://github.com/KeerthiThokala029/Cloud-Resource-Allocation-Optimization)
+*CSE (AI & ML) Student*
 
 ---
 
-## 📄 License
+### 🔗 Connect
 
-This project is currently intended for **academic and educational use**.
+**GitHub:**  
+[KeerthiThokala029](https://github.com/KeerthiThokala029)
+
+**Project Repository:**  
+[Quantum-Inspired Cloud Resource Allocation Optimization](https://github.com/KeerthiThokala029/Quantum-Inspired-Cloud-Resource-Allocation-Optimization)
+
+---
+
+### 📄 License
+
+This project is intended for academic and educational purposes.
+
+You may use the source code for learning, experimentation, and research with appropriate attribution.
+```
+
 
 A formal open-source license can be added to the repository in the future if the project is released under a specific license such as MIT.
 
