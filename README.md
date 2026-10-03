@@ -1228,7 +1228,6 @@ Therefore, a result from one experiment should not be interpreted as a universal
 
 ---
 
-```markdown
 ## 👩‍💻 32. Disclaimer, Author, Connect & License
 
 ### ⚠️ Disclaimer
@@ -1268,6 +1267,14 @@ This project is intended for educational, experimental, and research purposes.
 This project is intended for academic and educational purposes.
 
 You may use the source code for learning, experimentation, and research with appropriate attribution.
+
+A formal open-source license can be added to the repository in the future if the project is released under a specific license such as MIT.
+
+---
+
+### 📄 License
+
+
 ```
 
 
@@ -1284,3 +1291,5 @@ The project combines:
 > **☁️ Cloud Computing + 📊 Resource Allocation + 🧬 Evolutionary Optimization + ⚛️ Quantum-Inspired Computing + 📈 Data Visualization**
 
 to provide an interactive platform for experimenting with intelligent cloud scheduling strategies.
+
+```
