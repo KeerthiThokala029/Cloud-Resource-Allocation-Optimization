@@ -17,8 +17,8 @@ The system provides an interactive workflow for uploading workload data, configu
 - [Motivation](#-motivation)
 - [Objectives](#-objectives)
 - [Core Features](#-core-features)
-- [Technology Stack](#-technology-stack)
-- [System Architecture](#-system-architecture)
+- [Technology Stack](#️-technology-stack)
+- [System Architecture](#️-system-architecture)
 - [Architecture Explanation](#-architecture-explanation)
 - [Dataset](#-dataset)
 - [Dataset Schema](#-dataset-schema)
@@ -29,6 +29,7 @@ The system provides an interactive workflow for uploading workload data, configu
 - [Scheduling Factors](#-scheduling-factors)
 - [Optimization Objectives](#-optimization-objectives)
 - [Performance Metrics](#-performance-metrics)
+- [Reproducible Benchmarking](#-reproducible-benchmarking)
 - [MIPS Sensitivity Analysis](#-mips-sensitivity-analysis)
 - [System Workflow](#-system-workflow)
 - [Application Modules](#-application-modules)
@@ -116,7 +117,7 @@ A scheduling solution may need to balance:
 - Scheduling efficiency
 - Estimated cost
 
-Traditional scheduling methods can distribute tasks efficiently in a simple manner, but optimization-based methods can explore a larger set of possible task-to-VM assignments.
+Traditional scheduling methods can distribute tasks in a simple and predictable manner, while optimization-based methods can explore a larger set of possible task-to-VM assignments.
 
 This project explores a **Quantum-Inspired Evolutionary Algorithm (QIEA)** as an optimization-oriented approach to cloud scheduling.
 
@@ -143,8 +144,6 @@ The major objectives of the project are:
 ---
 
 ## ✨ Core Features
-
-The application provides an optimization-focused cloud scheduling dashboard with the following capabilities.
 
 ### 📂 Dataset Processing
 
@@ -226,7 +225,7 @@ The results interface provides:
 
 ## 🛠️ Technology Stack
 
-| **Category** | **Technology** |
+| Category | Technology |
 |---|---|
 | Frontend | React |
 | Programming Language | TypeScript |
@@ -247,41 +246,74 @@ The application is implemented as a client-side web application. The scheduling 
 
 The system follows an end-to-end workflow from workload input and preprocessing through scheduling, optimization, performance evaluation, MIPS analysis, and visualization.
 
+![System Architecture](./docs/architecture/system-architecture.png)
+
+### 🔎 Architecture Explanation
+
+- **Input Layer** – Provides the cloud workload dataset.
+- **Dataset Upload** – Allows users to upload workload data through the application.
+- **Parsing & Validation** – Detects the dataset structure and validates the uploaded workload data.
+- **Configuration Layer** – Defines VM count, MIPS, mutation rate, crossover probability, rotation angle, and energy model.
+- **Scheduling Layer** – Executes the traditional Round-Robin scheduling baseline.
+- **Optimization Layer** – Executes the Quantum-Inspired Evolutionary Algorithm.
+- **Fitness Evaluation** – Evaluates candidate solutions using multiple scheduling objectives.
+- **Evolution Layer** – Applies selection, crossover, rotation, mutation, and best-solution tracking.
+- **Performance Layer** – Calculates energy, execution time, resource utilization, scheduling efficiency, and estimated cost.
+- **Sensitivity Analysis** – Evaluates the effect of different VM processing capacities.
+- **Visualization Layer** – Displays comparisons, fitness history, sensitivity-analysis charts, and final results.
+
+---
+
+## 📚 Dataset
+
+The application accepts structured workload data containing information required to model cloud tasks.
+
+The uploaded dataset is parsed by the application and converted into an internal task representation before scheduling simulation.
+
+The system is designed to work with workload datasets that contain:
+
+- Task identifiers
+- Task/workload size information
+- Processing requirements
+- Additional scheduling-related attributes when available
+
+The exact fields depend on the uploaded workload dataset.
+
+---
+
+## 🧾 Dataset Schema
+
+The application does not depend on one fixed external dataset schema.
+
+During upload, the dataset parser identifies the available structure and converts valid records into the internal workload representation required by the simulator.
+
+A typical workload record can conceptually contain:
+
+| Field | Description |
+|---|---|
+| Task ID | Unique identifier for a task |
+| Workload / Length | Computational workload associated with the task |
+| Additional Attributes | Dataset-specific scheduling information |
+
+> The exact column names and available attributes depend on the dataset supplied by the user.
+
+---
+
+## 🔄 Data Processing
+
+The dataset processing pipeline consists of the following stages:
+
 ```text
-                    ☁️ CLOUD WORKLOAD DATASET
-                              │
-                              ▼
-                    📂 DATASET UPLOAD
-                              │
-                              ▼
-                    🔍 PARSING & VALIDATION
-                              │
-                              ▼
-                    ⚙️ SIMULATION CONFIGURATION
-                              │
-                              ▼
-                 ┌────────────┴────────────┐
-                 │                         │
-                 ▼                         ▼
-        🔄 ROUND-ROBIN              ⚛️ QIEA OPTIMIZATION
-          SCHEDULING                       │
-                 │                         │
-                 │                ┌────────┴────────┐
-                 │                │                 │
-                 │                ▼                 ▼
-                 │          Fitness Evaluation   Evolution
-                 │                │                 │
-                 │                └────────┬────────┘
-                 │                         │
-                 └────────────┬────────────┘
-                              ▼
-                    📊 PERFORMANCE METRICS
-                              │
-                              ▼
-                    📈 RESULT COMPARISON
-                              │
-                              ▼
-                    🔬 MIPS SENSITIVITY
-                              │
-                              ▼
-                    📊 RESULTS DASHBOARD
+Dataset Upload
+      ↓
+File Parsing
+      ↓
+Delimiter / Structure Detection
+      ↓
+Header Validation
+      ↓
+Data Validation
+      ↓
+Task Representation
+      ↓
+Simulation Input
